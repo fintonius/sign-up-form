@@ -1,0 +1,111 @@
+body {
+    height: 100vh;
+    font-size: 1rem;
+    background-color: gainsboro;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 2fr 3fr;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.side-image {
+    background-image: url("/images/halie-west-.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.text-overlay{
+    color: white;
+    background-color: rgba(240, 248, 245, 0.2);
+    width: 100%;
+}
+
+.form-section {
+    padding: 20px;
+    background-color: white;
+    flex: 2;
+}
+
+.form-section p {
+    margin-top: 30px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+input {
+    border: solid 1px ;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+input:focus:invalid {
+    border-color: red;
+    background-color: rgba(255, 0, 0, .05);
+}
+  
+input:focus:valid,
+input:valid {
+    border-color: limegreen;
+}
+
+input:focus {
+    outline: none;
+    border-color: blue;
+}
+
+input:not(:focus):invalid,
+input:optional {
+   border-color: aqua;
+   background-color: white;
+}
+
+ #confirmedText {
+    color: limegreen;
+ }
+
+.form-input {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px
+}
+
+.intro {
+    flex: 1;    
+    align-self: stretch;
+    background-color: gainsboro;
+    padding: 15px;
+}
+
+.submit {
+    flex: 1; 
+    background-color: gainsboro;
+    padding: 15px;
+}
+
+button {
+    border-radius: 5px;
+    background-color: darkblue;
+    color: aliceblue;
+}
+
+span {
+    color: red;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}

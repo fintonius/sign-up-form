@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>SIgn-up Form</title>
+</head>
+<body>
+    <div class="side-image">
+        <div class="text-overlay">
+            some text
+        </div>
+    </div>
+    <main>
+        <div class="intro">
+            <p>
+                This is not a real online service! But then, what is reality?
+                Do you know, for certain, you're not currently dreaming? 
+            </p>
+            <p>
+                If these thoughts, and more, terrify you like they should, 
+                join us on ... by signing up below. 
+            </p>
+            </div>
+            <div class="form-section">
+                <h1>SIGN UP, BEFORE IT'S TOO LATE</h1>
+                <p>All fields marked with an <span>*</span> are required</p>
+                    <form id="signup" autocomplete="no">
+                            <article class="form-input">
+                                <label for="fname"><span>*</span> Name</label>
+                                <input type="text" id="fname" placeholder="Jane" name="fname" autocomplete="no" required/>
+                            </article>                            
+                            <article class="form-input">
+                                <label for="email"><span>*</span> Email</label>
+                                <input type="email" autocomplete="barnaby" id="email" placeholder="example@place.com" name="email"
+                                required/>
+                            </article> 
+                            <article class="form-input">
+                                <label for="pwd"><span>*</span> Password</label>
+                                
+                                <input type="password" autocomplete="world" id="pwd" name="pwd" placeholder="" minlength="8"
+                                required  
+                                pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" />
+                            </article>
+                            <article class="form-input">
+                                <label for="lname">Last Name</label>
+                                <input type="text" autocomplete="barnacles" id="lname" placeholder="Doe" name="lname" 
+                                onkeyup="inputCheck()"/>
+                            </article>
+                            <article class="form-input">
+                                <label for="pnumber">Phone Number</label>                                
+                                <input type="text" autocomplete="hell" id="pnumber" name="phone-number" pattern="(0|(\+44))(\d{10})"
+                                onkeyup="numberCheck()" placeholder="UK number only: +44 or 0 prefix"/>                                
+                            </article>                            
+                            <article class="form-input">
+                                <label for="confirm"><span>*</span> Confirm Password <small id="confirmedText"></small></label>
+                                <input type="text" autocomplete="world" id="confirm" required minlength="8"
+                                pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"/
+                                onkeyup="passwordCheck()">                                
+                            </article>                        
+                    </form>
+                    <small>Min 8 characters & at least one number, 
+                        uppercase & lowercase letter &: _ £ $ % & * ! .
+                        </small>
+            </div>
+            <div class="submit">
+                <button type="submit" form="signup">Create Account</button>
+                <article>Already have an account? Log in</article>
+            </div>
+       
+    </main>
+
+</body>
+<script src="scripts.js"></script>
+</html>
